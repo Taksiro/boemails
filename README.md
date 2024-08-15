@@ -8,6 +8,6 @@
     </script>
 </head>
 <body>
-<a href="BO_Notes/BO_Tags.html">Go to Page</a>
+<a href="VMBC-notes-main/CheatCODE/BO_Notes/BO_Tags.html">Go to Page</a>
 </body>
 </html>
