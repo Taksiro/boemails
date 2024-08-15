@@ -4,7 +4,7 @@
     <meta http-equiv="refresh" content="0;url=BO_Notes/homepage.html">
     <title>B.O. Cheat Code</title>
     <script language="javascript">
-        window.location.href = "BO_Notes/BO_Tags.html"
+        window.location.href = "VMBC-notes-main/BO_Notes/BO_Tags.html"
     </script>
 </head>
 <body>
