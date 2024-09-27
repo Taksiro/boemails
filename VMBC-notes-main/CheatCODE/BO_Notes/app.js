@@ -598,3 +598,29 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
+function formatText(command) {
+  if (command === 'createLink') {
+    const url = prompt('Enter the link URL:');
+    if (url) {
+      document.execCommand(command, false, url);
+    }
+  }
+  else {
+    document.execCommand(command, false, null);
+  }
+  if (command === 'increaseIndent'){
+    document.execCommand('indent', false, null);
+  }
+  if (command === 'decreaseIndent') {
+    document.execCommand('outdent', false, null);
+  }
+}
+
+function setCookie(area, value, expiryDate) {
+  let val = document.getElementById('floatingTextarea');
+  var d = new Date();
+  d.setTime(d.getTime() + (expiryDate*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+val = document.cookie = area + "=" + value + "; " + expires + "; path=/";
+}
+
