@@ -35,7 +35,6 @@ div .bb{
 }
 
 .card {
-  position:absolute;
   -webkit-transition: all .2s ease-out;
   -moz-transition: all .2s ease-out;
   -ms-transition: all .2s ease-out;
