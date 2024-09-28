@@ -1,5 +1,5 @@
 .form-controla{
- font-size: calc(0.2vw + 0.2vh + 1vmin);
+ font-size: calc(0.2vw + 0.2vh + .8vmin);
 }
 
 element{
