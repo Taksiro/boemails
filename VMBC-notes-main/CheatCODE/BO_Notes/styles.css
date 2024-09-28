@@ -5,12 +5,18 @@
 element{
   outline-color: whitesmoke;
 }
-
 div .bg{
   background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
 }
 
-
+div .g{
+  bottom: 10px;
+  margin-left: 66%;
+  width: 30%;
+}
+div .a{
+  overflow-x: hidden;
+}
 div .bb{
   position: relative;
   height: 70vh;
