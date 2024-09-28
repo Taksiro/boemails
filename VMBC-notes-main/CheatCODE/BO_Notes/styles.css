@@ -32,3 +32,7 @@ div .bb{
   -o-transform: translateY(-15px);
   transform: translateY(-15px);
 }
+.card:hover {
+  filter:drop-shadow(1px 1px 10px rgba(0, 69, 134, 0.4));
+}
+
