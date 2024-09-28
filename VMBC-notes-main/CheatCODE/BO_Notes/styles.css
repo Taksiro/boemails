@@ -32,6 +32,14 @@ div .bb{
   -o-transform: translateY(-15px);
   transform: translateY(-15px);
 }
+.card {
+  position:absolute;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
 .card:hover {
   filter:drop-shadow(1px 1px 10px rgba(0, 69, 134, 0.4));
 }
