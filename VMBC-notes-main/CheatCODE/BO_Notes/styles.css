@@ -1,5 +1,8 @@
 .form-controla{
- font-size: calc(0.2vw + 0.2vh + .8vmin);
+ 
+}
+html {
+  scroll-behavior: smooth;
 }
 
 element{
@@ -19,21 +22,20 @@ div .a{
 }
 div .bb{
   position: relative;
-  height: 50vh;
+  height: 70vh;
   overflow-y: scroll;
+  
 }
 
 .shadow-sm:hover{
   shadow-sm: 0 20px 40px rgba(72,78,85,.6);
-  transform: translateY(-15px);
+  transform: translateY(-1px);
 }
 
 .card {
   transition: all .2s ease-out;
 }
 .card:hover {
-  filter:drop-shadow(1px 1px 10px rgba(0, 69, 134, 0.4));
+  filter:drop-shadow(1px 1px 5px rgba(0, 69, 134, 0.4));
 }
-
-
 
