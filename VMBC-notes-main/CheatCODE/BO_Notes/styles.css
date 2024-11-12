@@ -16,19 +16,17 @@ div .g{
   margin-left: 66%;
   width: 30%;
 }
-
 div .a{
   overflow-x: hidden;
 }
-
 div .bb{
   position: relative;
   height: 70vh;
   overflow-y: scroll;
+  
 }
 
 .shadow-sm:hover{
-  shadow-sm: 0 20px 40px rgba(72,78,85,.6);
   transform: translateY(-1px);
 }
 
@@ -37,7 +35,7 @@ div .bb{
 }
 
 .card:hover {
-  filter:drop-shadow(1px 1px 5px rgba(0, 69, 134, 0.4));
+  filter:drop-shadow(1px 1px 5px rgba(251, 177, 23, 0.4));
 }
 
 #btn-back-to-top {
@@ -46,3 +44,4 @@ div .bb{
   left: 50px;
   display: none;
 }
+
