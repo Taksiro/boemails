@@ -38,4 +38,12 @@ div .bb{
 .card:hover {
   filter:drop-shadow(1px 1px 5px rgba(0, 69, 134, 0.4));
 }
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 50px;
+  display: none;
+  filter: drop-shadow(0 0 0.12rem #111810);
+  
+}
 
