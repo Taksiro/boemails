@@ -584,20 +584,7 @@ for(var i = 0; i<c.length; i++){
 //q.parentNode.style.fontWeight = 'normal';
 
 }
-function startTime() {
-const today = new Date();
-let h = today.getHours();
-let m = today.getMinutes();
-let s = today.getSeconds();
-m = checkTime(m);
-s = checkTime(s);
-  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
-  setTimeout(startTime, 1000);
-}
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
+
 function formatText(command) {
   if (command === 'createLink') {
     const url = prompt('Enter the link URL:');
@@ -617,9 +604,11 @@ function formatText(command) {
 }
 
 //Get the button
+
 let mybutton = document.getElementById("btn-back-to-top");
 
 // When the user scrolls down 20px from the top of the document, show the button
+
 window.onscroll = function () {
   scrollFunction();
 };
@@ -634,8 +623,11 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
+
 // When the user clicks on the button, scroll to the top of the document
+
 mybutton.addEventListener("click", backToTop);
+
 function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
