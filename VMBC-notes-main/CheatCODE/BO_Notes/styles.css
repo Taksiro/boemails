@@ -1,8 +1,24 @@
+#templates{
+  width: 30%;
+  overflow-y: auto;
+  max-height: 75%;
+}
+.nav-link{
+  color: black;
+}
+#templates .active{
+  background-color: transparent;
+  color: #1474fc;
+}
+
+.st{
+  max-width: 85%;  
+}
+
 .form-controla{
   outline-color: #EFEFF6;
   cursor: text;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -30,18 +46,27 @@ div .bb{
   transform: translateY(-1px);
 }
 
+#button-addon2{
+  background-color: black;
+  color: whitesmoke;
+}
+
+#button-addon2:hover{
+  color:black;
+  background-color: #FFD300;
+}
+
 .card {
   transition: all .2s ease-out;
 }
 
 .card:hover {
-  filter:drop-shadow(1px 1px 5px rgba(251, 177, 23, 0.4));
+  filter:drop-shadow(1px 1px 5px rgba(0, 69, 134, 0.4));
 }
 
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
-  left: 50px;
+  right: 30px;
   display: none;
 }
-
