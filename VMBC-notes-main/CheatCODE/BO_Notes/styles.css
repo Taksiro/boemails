@@ -1,11 +1,13 @@
 #templates{
   width: 30%;
   overflow-y: auto;
-  max-height: 75%;
+  max-height: 50%;
 }
+
 .nav-link{
   color: black;
 }
+
 #templates .active{
   background-color: transparent;
   color: #1474fc;
@@ -19,6 +21,7 @@
   outline-color: #EFEFF6;
   cursor: text;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -32,14 +35,15 @@ div .g{
   margin-left: 66%;
   width: 30%;
 }
+
 div .a{
   overflow-x: hidden;
 }
+
 div .bb{
   position: relative;
   height: 70vh;
   overflow-y: scroll;
-  
 }
 
 .shadow-sm:hover{
