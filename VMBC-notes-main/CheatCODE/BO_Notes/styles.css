@@ -1,7 +1,7 @@
 #templates{
   width: 30%;
   overflow-y: auto;
-  max-height: 50%;
+  max-height: 75%;
 }
 
 .nav-link{
