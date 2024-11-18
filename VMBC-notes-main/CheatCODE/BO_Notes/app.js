@@ -633,4 +633,83 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
+const typedSpan = document.getElementById("typed");
+const totype = ["Support", "Email", "Templates"];
+
+const delayTyping_char = 150;
+const delayErasing_text = 150;
+const delayTyping_text = 2000;
+
+let totypeIndex = 0;
+let charIndex = 0;
+
+function typeText() {
+	if (charIndex < totype[totypeIndex].length) {
+		typedSpan.textContent += totype[totypeIndex].charAt(charIndex);
+		charIndex++;
+		setTimeout(typeText, delayTyping_char);
+	}
+	else {
+		setTimeout(eraseText, delayTyping_text);
+	}
+}
+
+function eraseText() {
+	if (charIndex > 0) {
+		typedSpan.textContent = totype[totypeIndex].substring(0, charIndex-1);
+		charIndex = charIndex-1;
+		setTimeout(eraseText, delayErasing_text);
+	}
+	else {
+		totypeIndex++;
+		if (totypeIndex >= totype.length)
+			totypeIndex = 0;
+			setTimeout(typeText, delayTyping_text);
+	}
+}
+
+window.onload = function() {
+	if (totype[totypeIndex].length) setTimeout(typeText, delayTyping_text);
+}
+
+
+function phtime() {
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+
+  const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
+  document.getElementById("clock").textContent = timeString;
+}
+
+setInterval(phtime, 1000);
+
+function displayTime(timeZone) {
+  const now = new Date();
+  const timeDiffMs = 3 * 60 * 60 * 1000; // 3 hours difference
+  // Subtract the time difference from the GMT time
+  const gmtMinus3Time = new Date(now.getTime() - timeDiffMs);
+  // Specify the desired time zone with DST consideration
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    hour12: false,
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    timeZone: 'GMT' // Replace with your desired time zone
+  });
+  const formattedGMTMinus3Time = formatter.format(gmtMinus3Time);
+  const usampm = formatter >= 24 ? 'PM' : 'AM';
+  // Display the formatted date and time in an HTML element
+  document.getElementById('dstTime').textContent = `${formattedGMTMinus3Time} ${usampm}`;
+}
+
+// Example usage:
+const desiredTimeZone = 'GMT'; // Replace with your desired time zone
+displayTime(desiredTimeZone);
+
+// Update the time every second
+setInterval(() => displayTime(desiredTimeZone), 1000);
+
 
