@@ -686,6 +686,92 @@ function phtime() {
 
 setInterval(phtime, 1000);
 
+//function maniladisplayTime(timeZone) {
+//  const now = new Date();
+  // Specify time zone 'Asia/Manila'
+//  const options = {
+//    hour12: true,
+//    hour: 'numeric',
+//    minute: 'numeric',
+//    second: 'numeric',
+//    timeZone: 'Asia/Manila'
+//  };
+
+//  const dates = {
+//    year: 'numeric',
+//    month: 'long',
+//    day: 'numeric'
+//  }
+//  const formattedDate = new Intl.DateTimeFormat('en-US', dates).format(now);
+  // Format the date and time according to the specified time zone
+//  const formattedTime = new Intl.DateTimeFormat('en-US', options).format(now);
+  // const usampm = formattedDate >= 24 ? 'PM' : 'AM';
+
+  // Display the formatted date and time in an HTML element
+//  document.getElementById('phtime').textContent = formattedTime;
+//  document.getElementById('phdate').textContent = formattedDate;
+//}
+// Example usage:
+//const phdesiredTimeZone = 'Asia/Manila'; // Replace with your desired time zone
+//maniladisplayTime(phdesiredTimeZone);
+// Update the time every second
+//setInterval(() => maniladisplayTime(phdesiredTimeZone), 1000);
+
+//function displayTime(timeZone) {
+//  const now = new Date();
+//  const timeDiffMs = 3 * 60 * 60 * 1000; // 3 hours difference
+  // Subtract the time difference from the GMT time
+//  const gmtMinus3Time = new Date(now.getTime() - timeDiffMs);
+  // Specify the desired time zone with DST consideration
+//  const formatter = new Intl.DateTimeFormat('en-US', {
+//    hour12: false,
+//    year: 'numeric',
+//    month: 'long',
+//    day: 'numeric',
+//    hour: 'numeric',
+//    minute: 'numeric',
+//    second: 'numeric',
+//    timeZone: 'GMT' // Replace with your desired time zone
+//  });
+//  const formattedGMTMinus3Time = formatter.format(gmtMinus3Time);
+//  const gmtampm = formatter >= 24 ? 'PM' : 'AM';
+  // Display the formatted date and time in an HTML element
+//  document.getElementById('GMT-3').textContent = `${formattedGMTMinus3Time} ${gmtampm}`;
+//}
+
+//const desiredTimeZone = 'GMT';
+//displayTime(desiredTimeZone);
+//setInterval(() => displayTime(desiredTimeZone), 1000);
+
+//function usdisplayTime(timeZone) {
+//  const now = new Date();
+
+  // Specify the time zone EST
+ // const options = {
+  //  hour12: false,
+//    year: 'numeric',
+//    month: 'long',
+//    day: 'numeric',
+//    hour: 'numeric',
+//    minute: 'numeric',
+//    second: 'numeric',
+//    timeZone: 'EST'
+//  };
+
+  // Format the date and time according to the specified time zone
+//  const formattedDate = new Intl.DateTimeFormat('en-US', options).format(now);
+//  const usampm = formattedDate >= 24 ? 'PM' : 'AM';
+  // Display the formatted date and time in an HTML element
+//  document.getElementById('est').textContent = `${formattedDate} ${usampm}`;
+//}
+
+// Example usage:
+//const usdesiredTimeZone = 'EST'; // Replace with your desired time zone
+//usdisplayTime(usdesiredTimeZone);
+
+// Update the time every second
+//setInterval(() => usdisplayTime(usdesiredTimeZone), 1000);
+
 function displayTime(timeZone) {
   const now = new Date();
 
@@ -724,18 +810,17 @@ function displayDate(dtimeZone){
   return formatedDate;
 }
 
-
+// Example usage:
 const phTimeZone = 'Asia/Manila';
-const gmtMinus3TimeZone = 'Etc/GMT+3'; 
+const gmtMinus3TimeZone = 'Etc/GMT+3'; // Or any GMT-3 timezone
 const estTimeZone = 'EST';
 
 setInterval(() => {
   // document.getElementById('phtime').textContent = displayTime(phTimeZone);
   document.getElementById('GMT-3').textContent = displayTime(gmtMinus3TimeZone, false);
-  document.getElementById('est').textContent = displayTime(estTimeZone, false); 
+  document.getElementById('est').textContent = displayTime(estTimeZone, false); // 24-hour format for EST
   document.getElementById('est-date').textContent = displayDate(estTimeZone);
   document.getElementById('gmt-3-date').textContent = displayDate(gmtMinus3TimeZone);
   document.getElementById('asia-date').textContent = displayDate(phTimeZone);
 }, 1000);
-
 
