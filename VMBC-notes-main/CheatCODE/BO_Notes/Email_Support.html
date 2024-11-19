@@ -72,6 +72,7 @@
         <div class="col-4">
           <nav id="templates" class="h-100 flex-column align-items-stretch pe-4 ms-5 position-fixed">
             <nav class="nav nav-pills flex-column">
+              <a class="nav-link" href="#TZ-15">Time Zones</a>
               <a class="nav-link" href="#FTR-1">First Time Response</a>
               <nav class="nav nav-pills flex-column">
                 <a class="nav-link ms-3 my-1" href="#FTR-1-1">Activation</a>
@@ -127,6 +128,41 @@
 
         <div class="col-8">
           <div data-bs-spy="scroll" data-bs-target="#templates" data-bs-smooth-scroll="true" class="scrollspy-example-2 ms-2 st" tabindex="0">
+            <div id="TZ-15">
+              <div class="row">
+                <div class="col shadow-sm p-3 mb-5 bg-dark text-white rounded">
+                  <span class="fs-4">Helpscout</span>
+                  <small class="align-baseline text-warning"><div class="vr me-2"></div>Etc/GMT+3</small>
+                  <hr class="m-0" /> 
+                  <div class="p-3 mt-4 bg-dark text-white rounded">
+                  <span class="fs-6"id="gmt-3-date"></span>
+                  <br>
+                  <span class="fs-1 fw-semibold" id="GMT-3"></span>
+                  </div>
+                </div>
+                <div class="col shadow-sm p-3 mb-5 bg-dark text-white rounded ms-2">
+                  <span class="fs-4" >Vault</span>
+                  <small class="align-baseline text-warning"><div class="vr me-2"></div>EST</small>
+                  <hr class="m-0" /> 
+                  <div class="p-3 mt-4 bg-dark text-white rounded">
+                  <span class="fs-6"id="est-date"></span>
+                  <br>
+                  <span class="fs-1 fw-semibold" id="est"></span>
+                  </div>
+                </div>
+                <div class="col shadow-sm p-3 mb-5 bg-dark text-white rounded ms-2">
+                  <span class="fs-4">Philippines</span>
+                  <small class="align-baseline text-warning"><div class="vr me-2"></div>Asia/Manila</small>
+                  <hr class="m-0" /> 
+                  <div class="p-3 mt-4 bg-dark text-white rounded">
+                  <span class="fs-6"id="asia-date"></span>
+                  <br>
+                  <span class="fs-1 fw-semibold" id="phtime"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/TZ-15-->
             <div id="FTR-1" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
               <span class="blockquote fs-5 fw-semibold mt-2 ms-1">First Time Response</span>
               <hr class="m-0" /> 
@@ -145,6 +181,7 @@
               </div>
             </div>
             <!--/ FTR-1-->
+            
             <div id="FTR-1-1" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
               <div class="row">
                 <div class="col">
@@ -719,22 +756,17 @@
             <!--/ File-14-->
           </div>
           <!--/#templates-->
+          <button type="button" class="btn btn" id="btn-back-to-top"> <i class="fas fa-arrow-up fa-3x"></i></button>
         </div>
         <!--/Col-8-->
+        <nav class="navbar sticky-bottom bot ">  
+          <div class="col-4 h3 ms-4 typewriter">
+            Safelink <span id="typed"></span><span class="cursor">&nbsp;</span>
+          </div>
+          
+        </nav>
       </div>
       <!-- End of Row-->
-      <button type="button" class="btn btn" id="btn-back-to-top"> <i class="fas fa-arrow-up fa-3x"></i></button>
-      <nav class="navbar fixed-bottom bot ">  
-        <div class="col-4 h3 ms-4 typewriter">
-          Safelink <span id="typed"></span><span class="cursor">&nbsp;</span>
-        </div>
-        <div class="col-8 me-3">
-          <ul class="list-inline d-flex justify-content-end column-gap-3">
-            <p class="list-inline-item">Helpscout Time: <span id="dstTime"></span></p> ||
-            <p class="list-inline-item">Philippines: <span id="clock"></span></p>
-          </ul>
-        </div>
-      </nav>
     </div>
     <!-- /container fluid -->
     <!-- Optional JavaScript; choose one of the two! -->
