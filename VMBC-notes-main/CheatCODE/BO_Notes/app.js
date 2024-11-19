@@ -677,45 +677,6 @@ function phtime() {
   const now = new Date();
   let hours = now.getHours();
   const minutes = now.getMinutes().toString().padStart(2, '0');
-  const seconds = now.getSeconds().toString().padStart(2, '0');
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-	hours = hours % 12 || 12;
-  const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
-  document.getElementById("clock").textContent = timeString;
-}
-
-setInterval(phtime, 1000);
-
-function displayTime(timeZone) {
-  const now = new Date();
-  const timeDiffMs = 3 * 60 * 60 * 1000; // 3 hours difference
-  // Subtract the time difference from the GMT time
-  const gmtMinus3Time = new Date(now.getTime() - timeDiffMs);
-  // Specify the desired time zone with DST consideration
-  const formatter = new Intl.DateTimeFormat('en-US', {
-    hour12: false,
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    timeZone: 'GMT' // Replace with your desired time zone
-  });
-  const formattedGMTMinus3Time = formatter.format(gmtMinus3Time);
-  const usampm = formatter >= 24 ? 'PM' : 'AM';
-  // Display the formatted date and time in an HTML element
-  document.getElementById('dstTime').textContent = `${formattedGMTMinus3Time} ${usampm}`;
-}
-
-// Example usage:
-const desiredTimeZone = 'GMT'; // Replace with your desired time zone
-displayTime(desiredTimeZone);
-
-// Update the time every second
-setInterval(() => displayTime(desiredTimeZone), 1000);
-
-function phtime() {
-  const now = new Date();
-  let hours = now.getHours();
-  const minutes = now.getMinutes().toString().padStart(2, '0');
  const seconds = now.getSeconds().toString().padStart(2, '0');
  const ampm = hours >= 12 ? 'PM' : 'AM';
   hours = hours % 12 || 12;
@@ -763,15 +724,15 @@ function displayDate(dtimeZone){
   return formatedDate;
 }
 
-// Example usage:
+
 const phTimeZone = 'Asia/Manila';
-const gmtMinus3TimeZone = 'Etc/GMT+3'; // Or any GMT-3 timezone
+const gmtMinus3TimeZone = 'Etc/GMT+3'; 
 const estTimeZone = 'EST';
 
 setInterval(() => {
   // document.getElementById('phtime').textContent = displayTime(phTimeZone);
   document.getElementById('GMT-3').textContent = displayTime(gmtMinus3TimeZone, false);
-  document.getElementById('est').textContent = displayTime(estTimeZone, false); // 24-hour format for EST
+  document.getElementById('est').textContent = displayTime(estTimeZone, false); 
   document.getElementById('est-date').textContent = displayDate(estTimeZone);
   document.getElementById('gmt-3-date').textContent = displayDate(gmtMinus3TimeZone);
   document.getElementById('asia-date').textContent = displayDate(phTimeZone);
