@@ -82,43 +82,43 @@ function handleCheckbox(checkbox){
       selecteditems.push(...items.AD);
       break;
     case 'Approved - Address Proof':
-      selecteditems = items.AA;
+      selecteditems.push(...items.AA);
       break;
     case 'Approved - FAP':
-      selecteditems = items.AFAP;
+      selecteditems.push(...items.AFAP);
       break;
     case 'Approved - Income Proof':
-      selecteditems = items.AI;
+      selecteditems.push(...items.AI);
       break;
     case 'Approved - SSN Proof':
-      selecteditems = items.ASP;
+      selecteditems.push(...items.ASP);
       break;
     case 'Approved - Dependent SSN Proof':
-      selecteditems = items.ADSP;
+      selecteditems.push(...items.ADSP);
       break;
     case 'Approved - Dependent DOB Proof':
-      selecteditems = items.ADDP;
+      selecteditems.push(...items.ADDP);
       break;
     case 'Disapproved - DOB Proof':
-      selecteditems = items.DD;
+      selecteditems.push(...items.DD);
       break;
     case 'Disapproved - Address Proof':
-      selecteditems = items.DAP;
+      selecteditems.push(...items.DAP);
       break;
     case 'Disapproved - FAP':
-      selecteditems = items.DFAP;
+      selecteditems.push(...items.DFAP);
       break;
     case 'Disapproved - Income Proof':
-      selecteditems = items.DI;
+      selecteditems.push(...items.DI);
       break;
     case 'Disapproved - SSN Proof':
-      selecteditems = items.DSP;
+      selecteditems.push(...items.DSP);
       break;
     case 'Disapproved - Dependent SSN Proof':
-      selecteditems = items.DDSP;
+      selecteditems.push(...items.DDSP);
       break;
     case 'Disapproved - Dependent DOB Proof':
-      selecteditems = items.DDD;
+      selecteditems.push(...items.DDD);
       break;
     default:
       console.log('Unknown Action');
@@ -673,18 +673,18 @@ window.onload = function() {
 }
 
 
-function phtime() {
-  const now = new Date();
-  let hours = now.getHours();
-  const minutes = now.getMinutes().toString().padStart(2, '0');
- const seconds = now.getSeconds().toString().padStart(2, '0');
- const ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12 || 12;
-  const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
-  document.getElementById("phtime").textContent = timeString;
-}
+//function phtime() {
+//  const now = new Date();
+//  let hours = now.getHours();
+//  const minutes = now.getMinutes().toString().padStart(2, '0');
+// const seconds = now.getSeconds().toString().padStart(2, '0');
+// const ampm = hours >= 12 ? 'PM' : 'AM';
+//  hours = hours % 12 || 12;
+//  const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
+//  document.getElementById("phtime").textContent = timeString;
+//}
 
-setInterval(phtime, 1000);
+//setInterval(phtime, 1000);
 
 //function maniladisplayTime(timeZone) {
 //  const now = new Date();
@@ -772,12 +772,12 @@ setInterval(phtime, 1000);
 // Update the time every second
 //setInterval(() => usdisplayTime(usdesiredTimeZone), 1000);
 
-function displayTime(timeZone) {
+function displayTime12hours(timeZone, hour24 = true) {
   const now = new Date();
 
   const options = {
     timeZone: timeZone,
-    hour12: false,
+    hour12: hour24,
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric'
@@ -786,14 +786,21 @@ function displayTime(timeZone) {
   const formatter = new Intl.DateTimeFormat('en-US', options);
   const formattedDateTime = formatter.format(now);
 
-  // Extract the hour part and determine AM/PM
-  const hours = parseInt(formattedDateTime.split(':')[0]);
-  const amPm = hours >= 12 ? ' PM' : ' AM';
+  return formattedDateTime;
+}
 
-  // Concatenate the date and time with AM/PM
-  const formattedDateTimeWithAmPm = formattedDateTime + amPm;
-
-  return formattedDateTimeWithAmPm;
+function displayTime24hours(timeZone){
+  const now = new Date();
+  const time = {
+    timeZone: timeZone,
+    hour12: false,
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  };
+  const formatter = new Intl.DateTimeFormat('en-US', time).format(now);
+  const pstAmpm = formatter >= 24 ? 'AM' : 'PM';
+  return `${formatter} ${pstAmpm}`;
 }
 
 function displayDate(dtimeZone){
@@ -812,15 +819,14 @@ function displayDate(dtimeZone){
 
 // Example usage:
 const phTimeZone = 'Asia/Manila';
-const gmtMinus3TimeZone = 'Etc/GMT+3'; // Or any GMT-3 timezone
 const estTimeZone = 'EST';
+const pstTimeZone = 'PST';
 
 setInterval(() => {
-  // document.getElementById('phtime').textContent = displayTime(phTimeZone);
-  document.getElementById('GMT-3').textContent = displayTime(gmtMinus3TimeZone, false);
-  document.getElementById('est').textContent = displayTime(estTimeZone, false); // 24-hour format for EST
+  document.getElementById('phtime').textContent = displayTime12hours(phTimeZone);
+  document.getElementById('est-time').textContent = displayTime12hours(estTimeZone);
+  document.getElementById('pst-time').textContent = displayTime24hours(pstTimeZone); // 24-hour format for PST
+  document.getElementById('pst-date').textContent = displayDate(pstTimeZone);
   document.getElementById('est-date').textContent = displayDate(estTimeZone);
-  document.getElementById('gmt-3-date').textContent = displayDate(gmtMinus3TimeZone);
   document.getElementById('asia-date').textContent = displayDate(phTimeZone);
 }, 1000);
-
