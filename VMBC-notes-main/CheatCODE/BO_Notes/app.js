@@ -183,7 +183,7 @@ function handleCheckbox(checkbox){
   }
 }
 
-function AsssP() {
+/*function AsssP() {
   const cl = document.getElementById('AP');
   const lnt = document.getElementById('listnote');
   const cln = document.getElementById('cnts');
@@ -205,7 +205,7 @@ function AsssP() {
         lst.textContent = lns;
         cln.appendChild(lst);
         /*Alert(`${lns}`);*/
-        lst.addEventListener('click', () =>{
+        /*lst.addEventListener('click', () =>{
           listnotes.hidden = false;
           cln.removeChild(lst);
           if(cln.lastChild && cln.lastChild.nodeType === Node.TEXT_NODE){
@@ -375,7 +375,7 @@ function DPsss(){
         lst.textContent = lns;
         cln.appendChild(lst);
         /*Alert(`${lns}`);*/
-        lst.addEventListener('click', () =>{
+        /*lst.addEventListener('click', () =>{
           listnotes.hidden = false;
           cln.removeChild(lst);
           if(cln.lastChild && cln.lastChild.nodeType === Node.TEXT_NODE){
@@ -392,7 +392,7 @@ function DPsss(){
    /* while (cln.firstChild) {
       cln.removeChild(cln.firstChild);
     }*/
-  }
+ /* }
   cl.addEventListener('change', DP);
 }
 /* function DP() {
@@ -411,7 +411,7 @@ let a = " ";
      t.value = "";
   }
 }*/
-function DD() {
+/*function DD() {
 var checkBox = document.getElementById('DD');
 var n = document.getElementById('DDS');
 var t = document.getElementById('NN');
@@ -523,68 +523,7 @@ let a = " ";
      t.value = "";
   }
 }
-function deSelect(){  
-var c = document.getElementsByName('chk');
-let txtbox = document.getElementById('CN');
-const note= document.getElementById('cnts');
-for(var i = 0; i<c.length; i++){
-    checkboxes[i].checked = false;
-   // window.location.reload(true);
- 
-  
-
-}
-//var a= document.getElementById('AP');
-//var b= document.getElementById('AD');
-//var c= document.getElementById('AA');
-//var d= document.getElementById('AFAP');
-//var e= document.getElementById('AI');
-//var f= document.getElementById('ASP');
-//var g= document.getElementById('ADSP');
-//var h= document.getElementById('DP');
-//var j= document.getElementById('DD');
-//var k= document.getElementById('DAP');
-//var l= document.getElementById('DFAP');
-//var m= document.getElementById('DI');
-//var n= document.getElementById('DSP');
-//var o= document.getElementById('DDSP');
-//var p= document.getElementById('DDD');
-//var q= document.getElementById('ADDP');
-//a.disabled = false;
-//a.parentNode.style.fontWeight = 'normal';
-//b.disabled = false;
-//b.parentNode.style.fontWeight = 'normal';
-//c.disabled = false;
-//c.parentNode.style.fontWeight = 'normal';
-//d.disabled = false;
-//d.parentNode.style.fontWeight = 'normal';
-//e.disabled = false;
-//e.parentNode.style.fontWeight = 'normal';
-//f.disabled = false;
-//f.parentNode.style.fontWeight = 'normal';
-//g.disabled = false;
-//g.parentNode.style.fontWeight = 'normal';
-//h.disabled = false;
-//h.parentNode.style.fontWeight = 'normal';
-//j.disabled = false;
-//j.parentNode.style.fontWeight = 'normal';
-//k.disabled = false;
-//k.parentNode.style.fontWeight = 'normal';
-//l.disabled = false;
-//l.parentNode.style.fontWeight = 'normal';
-//m.disabled = false;
-//m.parentNode.style.fontWeight = 'normal';
-//n.disabled = false;
-//n.parentNode.style.fontWeight = 'normal';
-//o.disabled = false;
-//o.parentNode.style.fontWeight = 'normal';
-//p.disabled = false;
-//p.parentNode.style.fontWeight = 'normal';
-//q.disabled = false;
-//q.parentNode.style.fontWeight = 'normal';
-
-}
-
+*/
 function formatText(command) {
   if (command === 'createLink') {
     const url = prompt('Enter the link URL:');
@@ -625,8 +564,6 @@ function scrollFunction() {
 }
 
 // When the user clicks on the button, scroll to the top of the document
-
-mybutton.addEventListener("click", backToTop);
 
 function backToTop() {
   document.body.scrollTop = 0;
@@ -774,7 +711,6 @@ window.onload = function() {
 
 function displayTime12hours(timeZone, hour24 = true) {
   const now = new Date();
-
   const options = {
     timeZone: timeZone,
     hour12: hour24,
@@ -782,10 +718,8 @@ function displayTime12hours(timeZone, hour24 = true) {
     minute: 'numeric',
     second: 'numeric'
   };
-
   const formatter = new Intl.DateTimeFormat('en-US', options);
   const formattedDateTime = formatter.format(now);
-
   return formattedDateTime;
 }
 
@@ -811,22 +745,44 @@ function displayDate(dtimeZone){
     month: 'long',
     day: 'numeric'
   };
-
   const formatDate = new Intl.DateTimeFormat('en-US', opdate);
   const formatedDate = formatDate.format(now);
   return formatedDate;
 }
 
-// Example usage:
 const phTimeZone = 'Asia/Manila';
 const estTimeZone = 'EST';
 const pstTimeZone = 'PST';
+const phTime = document.getElementById('ph_time');
+const asiaDate = document.getElementById('asia_date');
+const pstTime = document.getElementById('pst-time');
+const pstDate = document.getElementById('pst-date');
+const estTime = document.getElementById('est-time');
+const estDate = document.getElementById('est-date');
 
-setInterval(() => {
-  document.getElementById('phtime').textContent = displayTime12hours(phTimeZone);
-  document.getElementById('est-time').textContent = displayTime12hours(estTimeZone);
-  document.getElementById('pst-time').textContent = displayTime24hours(pstTimeZone); // 24-hour format for PST
-  document.getElementById('pst-date').textContent = displayDate(pstTimeZone);
-  document.getElementById('est-date').textContent = displayDate(estTimeZone);
-  document.getElementById('asia-date').textContent = displayDate(phTimeZone);
-}, 1000);
+function updateTimedate(){  
+  phTime.textContent = displayTime12hours(phTimeZone);
+  asiaDate.textContent = displayDate(phTimeZone);
+  pstTime.textContent = displayTime24hours(pstTimeZone);
+  pstDate.textContent = displayDate(pstTimeZone);
+  estTime.textContent = displayTime12hours(estTimeZone);
+  estDate.textContent = displayDate(estTimeZone);
+}
+setInterval(updateTimedate, 1000);
+
+const modal = document.getElementById('view_modal');
+const img = document.querySelector('#myImg');
+const modalImg = document.getElementById("img01");
+const captionText = document.getElementById("caption");
+const closeSpan = document.getElementsByClassName("close")[0];
+
+function viewImage(){
+  modal.style.display = "block";
+  modalImg.src = img.src;
+  captionText.textContent = img.alt;
+}
+
+function closeImage(){
+  modal.style.display = "none";
+}
+
