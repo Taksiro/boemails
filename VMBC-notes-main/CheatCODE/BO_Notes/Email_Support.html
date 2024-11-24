@@ -115,6 +115,7 @@
               <a class="nav-link" href="#SB-12">Select a Brand</a>
               <a class="nav-link" href="#VL-13">Valid location</a>
               <a class="nav-link" href="#File-14">File directory not found</a>
+              <a class="nav-link" href="#RQ-15">Reinstall Quest</a>
             </nav>
             <!--/ nav nav-pills-->
           </nav>
@@ -151,9 +152,9 @@
                   <small class="align-baseline text-warning"><div class="vr me-2"></div>Asia/Manila</small>
                   <hr class="m-0" /> 
                   <div class="p-3 mt-4 bg-dark text-white rounded">
-                  <span class="fs-6"id="asia-date"></span>
+                  <span class="fs-6"id="asia_date"></span>
                   <br>
-                  <span class="fs-1 fw-semibold" id="phtime"></span>
+                  <span class="fs-1 fw-semibold" id="ph_time"></span>
                   </div>
                 </div>
               </div>
@@ -349,11 +350,26 @@
                   <br>
                   <p>Best regards,</p>
                 </div>
+                <p><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover d-flex justify-content-end mt-3" data-bs-toggle="modal" data-bs-target="#Invalid_F_modal"> See Images</a></p>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="Invalid_F_modal" tabindex="-1" aria-labelledby="Invalid_F_modallabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="Invalid_F_modallabel">Screenshot Reference</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="Screenshots/Invalid_format.png" class="object-fit-fill border rounded ratio ratio-1x1" alt="INVALID_FORMAT_PROVIDED">
+                  </div>
+                </div>
               </div>
             </div>
             <!--/ PQ-4-2-->
             <div id="PQ-4-3" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Unknown Issue (Object object, Unknown, E-Timeout, Oops)</span>
+              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Unknown Issue (Object object, Unknown, E-Timeout, Oops, IDBDatabase)</span>
               <hr class="m-0" /> 
               <div class="card-body">
                 <div class="form-controla p-3" contenteditable="true">
@@ -364,10 +380,27 @@
                   <br>
                   <p>++ Please confirm if you have tried to run the Quest App on other compatible devices. Also, is this happening consistently to all applications or just one?</p>
                   <br>
+                  <p>++ Please note that the Quest App doesn't work on mobile phones, it is best compatible with iPads and tablets.</p>
+                  <br>
                   <p>++ Please provide a screenshot of the error for further checking.</p>
                   <br>
                   <br>
                   <p>Best regards,</p>
+                </div>
+                <p><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover d-flex justify-content-end mt-3" data-bs-toggle="modal" data-bs-target="#UI_modal"> See Images</a></p>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="UI_modal" tabindex="-1" aria-labelledby="UI_modallabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="UI_modallabel">Screenshot Reference</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="Screenshots/connection_closing.png" class="object-fit-fill border rounded ratio ratio-1x1" alt="...">
+                  </div>
                 </div>
               </div>
             </div>
@@ -695,8 +728,13 @@
                   </div>
                   <div class="modal-body">
                     <img src="Screenshots/retraining_1.png" class="object-fit-fill border rounded ratio ratio-1x1" alt="...">
-                    <img src="Screenshots/retraining_2.png" class="object-fit-fill border rounded ratio ratio-1x1" alt="...">
-                    <img src="Screenshots/retraining_3.png" class="object-fit-fill border rounded ratio ratio-1x1" alt="...">
+                    <img src="Screenshots/retraining_2.png" class="object-fit-fill border rounded ratio ratio-1x1 mt-3" alt="...">
+                    <img id="myImg" src="Screenshots/retraining_3.png" class="object-fit-fill border rounded ratio ratio-1x1 mt-3" alt="Retraining Process" onclick="viewImage();">
+                    <div id="view_modal" class="second-modal">
+                    <span class="close" onclick="closeImage();">&times;</span>
+                    <img class="second-modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -730,7 +768,19 @@
                   <p>Hi there,</p>
                   <br>
                   <br>
-                  <p>The ________________ has been updated as per your request. Please refresh the application to see the updated changes.</p>
+                  <p>In order to proceed with the profile edition of your/agent's profile, could you please provide at least 2 of the following?:
+                  </p>
+                  <br>
+                  <ul>
+                    <li>Your Firstname and Lastname:</li>
+                    <li>Username:</li>
+                    <li>Email Address:</li>
+                  </ul>
+                  <br>
+                  <p>Thank you,</p>
+                  <br>
+                  <br>
+                  <p><strong>After edition</strong> - The ________________ has been updated as per your request. Please refresh the application to see the updated changes.</p>
                   <br>
                   <p>Please do not hesitate to reach out if you have any other concerns.</p>
                   <br>
@@ -799,7 +849,7 @@
                   <p>Hi there,</p>
                   <br>
                   <br>
-                  <p>Kindly make sure you are logging in to the new Quest application. For reference, here is the link to download the New Quest application:</p>
+                  <p>Please make sure you are logging in to the new Quest application. For reference, here is the link to download the New Quest application:</p>
                   <br>
                   <p><a href="https://tracfone.quest.emerios.com/"> https://tracfone.quest.emerios.com</a></p>
                   <br>
@@ -810,19 +860,71 @@
                   <br>
                   <p>Best regards,</p>
                 </div>
+                <p><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover d-flex justify-content-end mt-3" data-bs-toggle="modal" data-bs-target="#FD_modal"> See Images</a></p>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="FD_modal" tabindex="-1" aria-labelledby="FD_modallabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="FD_modallabel">Screenshot Reference</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="Screenshots/file_directory_error.png" class="object-fit-fill border rounded ratio ratio-1x1" alt="...">
+                  </div>
+                </div>
               </div>
             </div>
             <!--/ File-14-->
+            <div id="RQ-15" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Reinstall Quest Application</span>
+              <hr class="m-0" /> 
+              <div class="card-body">
+                <div class="form-controla p-3" contenteditable="true">
+                  <p>Hi there,</p>
+                  <br>
+                  <br>
+                  <p>This is the message you see when the Quest App needs reinstalling.</p>
+                  <br>
+                  <p>For reference, here is the link to download the Quest application:</p>
+                  <p><a href="https://tracfone.quest.emerios.com/"> https://tracfone.quest.emerios.com</a></p>
+                  <br>
+                  <p><strong>Phone screenshots</strong> - Please note that the Quest App doesn't work on mobile phones, it is best compatible with iPads and tablets.</p>
+                  <br>
+                  <p>Please let me know if it works. Thank you!</p>
+                  <br>
+                  <br>
+                  <p>Best regards,</p>
+                </div>
+                <p><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover d-flex justify-content-end mt-3" data-bs-toggle="modal" data-bs-target="#reinstall_modal"> See Images</a></p>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="reinstall_modal" tabindex="-1" aria-labelledby="reinstall_modallabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="reinstall_modallabel">Screenshot Reference</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="Screenshots/install_quest.png" class="object-fit-fill border rounded ratio ratio-1x1" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/ RQ-15-->
           </div>
           <!--/#templates-->
-          <button type="button" class="btn btn" id="btn-back-to-top"> <i class="fas fa-arrow-up fa-3x"></i></button>
+          <button type="button" class="btn btn" id="btn-back-to-top"> <i class="fas fa-arrow-up fa-3x" onclick="backToTop();"></i></button>
         </div>
         <!--/Col-8-->
         <nav class="navbar sticky-bottom bot ">  
           <div class="col-4 h3 ms-4 typewriter">
             Safelink <span id="typed"></span><span class="cursor">&nbsp;</span>
           </div>
-          
         </nav>
       </div>
       <!-- End of Row-->
