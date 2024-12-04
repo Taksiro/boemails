@@ -100,11 +100,11 @@ color: #FFD300;
   animation: none;
 }
 
-@keyframes blinker {
+/*@keyframes blinker {
 	0% { background-color: #292929; }
 	50% { background-color: transparent; }
 	100% { background-color: #292929; }
-}
+}*/
 
 #img01{
   width: auto;
