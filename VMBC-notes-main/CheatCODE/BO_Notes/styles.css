@@ -56,6 +56,12 @@ body.show-chatbot #chatbot-toggler{
   transform: rotate(90deg);
 }
 
+#chatbot-toggler:hover span:first-child {
+  opacity: 1;
+  color: #e4bc3b; 
+  transition: all 0.2s ease; 
+}
+
 body.show-chatbot #chatbot-toggler span:first-child,
 #chatbot-toggler span:last-child{
   opacity: 0;
