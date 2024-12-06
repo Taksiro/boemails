@@ -7,17 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link rel="icon" type="image/png" href="img/safelink.jpg"/>
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
-     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="styles.css">
      <title>Safelink Q.A. Notes</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFD300;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e9e9e9;">
       <div class="container-fluid">
         <a class="navbar-brand ms-5" href="javascript:window.location.reload(true)">
           <h4>Safelink Q.A. TAGS</h4>
@@ -63,6 +61,7 @@
         </form>
       </div>
     </div>
+    
     <div class="container-fluid mt-3">
       <div class="row">
         <div class="col-4 d-none d-md-block">
@@ -122,7 +121,6 @@
           <!--/templates-->
         </div>
         <!--/ col-4 -->
-        
         <div class="col">
           <div data-bs-spy="scroll" data-bs-target="#templates" data-bs-smooth-scroll="true" class="scrollspy-example-2 ms-2 st" tabindex="0">
             <div id="TZ-15">
@@ -142,9 +140,9 @@
                   <small class="align-baseline text-warning"><div class="vr me-2"></div>PST</small>
                   <hr class="m-0" /> 
                   <div class="p-3 mt-4 bg-dark text-white rounded">
-                  <span class="fs-6"id="pst-date"></span>
-                  <br>
-                  <span class="fs-1 fw-semibold" id="pst-time"></span>
+                    <span class="fs-6"id="pst-date"></span>
+                    <br>
+                    <span class="fs-1 fw-semibold" id="pst-time"></span>
                   </div>
                 </div>
                 <div class="col shadow-sm p-3 mb-5 bg-dark text-white rounded ms-2">
@@ -197,11 +195,7 @@
                   <br>
                   <br>
                   <p>Thank you for contacting Quest Support.</p>
-                  <br>
-                  <p>You may reach out to the Activations Team at <a href="tf-fieldactissues@verizon.com"> tf-fieldactissues@verizon.com</a> for further assistance.
-                  <br>
-                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
-                  <br>
+                  <p>You may reach out to the Activations Team at <a href="tf-fieldactissues@verizon.com">tf-fieldactissues@verizon.com </a>for further assistance.</p>
                   <br>
                   <p>Best regards,</p>
                 </div>
@@ -562,7 +556,7 @@
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
-                          <br>
+                  <br>
                   <p>Please be informed that there's still an intermittent issue with California Lifeline Administrator (CALAD).</p>
                   <br>
                   <p> Also, we have not received the estimated time for the system to be back to normal. We will provide you an update as soon as we receive feedback.</p>
@@ -634,7 +628,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <a href="https://secure.helpscout.net/conversation/2764672638/170126?viewId=8432482" target="_blank"><img src="Screenshots/Token_invalid.png" class="object-fit-fill border rounded ratio ratio-1x1 img-hover" alt="..."></a>
+                    <a href="https://secure.helpscout.net/conversation/2764672638/170126?viewId=8432482" target="_blank"><img src="Screenshots/Token_invalid.png" class="object-fit-fill border rounded ratio ratio-1x1 img-hover mt-3" alt="..."></a>
                   </div>
                 </div>
               </div>
@@ -759,7 +753,6 @@
                 <p><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover d-flex justify-content-end mt-3" data-bs-toggle="modal" data-bs-target="#geo_modal"> See Images</a></p>
               </div>
             </div>
-            
             <!-- Modal -->
             <div class="modal fade" id="geo_modal" tabindex="-1" aria-labelledby="geo_modallabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
@@ -795,7 +788,7 @@
                   <p>Thank you,</p>
                   <br>
                   <br>
-                  <p><strong>After edition</strong> - The ________________ has now been updated as per your request.</p>
+                  <p><strong>After edition</strong> - The ________________ has been updated as per your request. Please refresh the application to see the updated changes.</p>
                   <br>
                   <p>Please do not hesitate to reach out if you have any other concerns.</p>
                   <br>
@@ -935,14 +928,61 @@
           <!--/ #templates-->
         </div>
         <!--/Col-8-->
-        <nav class="navbar sticky-bottom bot ">  
+        <nav class="navbar sticky-bottom bot bg-dark">  
           <div class="col-4 h3 ms-4 typewriter">
-            Safelink <span id="typed"></span><span class="cursor">&nbsp;</span>
+            <span style="color: #9c9c9c;">Safelink</span> <span id="typed"></span><span class="cursor">&nbsp;</span>
           </div>
         </nav>
       </div>
       <!-- End of Row-->
-                <button type="button" class="btn btn" id="btn-back-to-top"> <i class="fas fa-arrow-up fa-3x" onclick="backToTop();"></i></button>
+      <div class="container chat-bot-d">
+        <div class="chatbot-popup">
+          <div class="chat-header overflow-hidden">
+            <div class="header-info row gx-5">
+              <div class="col justify-content-start d-flex"> 
+                <i class="bi bi-robot fs-2 rob-logo"></i>
+                <h2 class="logo-text m-2">Chatbot</h2>
+              </div>
+              <div class="col justify-content-end">
+                <button id="close-chatbot" type="button" class="btn float-end"><i class="bi bi-chevron-down fs-5"></i></button>
+              </div>
+            </div>
+          </div>
+          <!--/Chat Header-->
+          <div class="chatbot-body">
+            <div class="message bot-message">
+              <i class="bi bi-robot fs-3 rob-avatar"></i>
+              <div class="message-text">
+                Hey there <br /> How can I help you today?
+              </div>
+            </div>
+          </div>
+          <!--/Chat Body-->
+          <div class="chat-footer">
+            <form action="#" class="chat-form">
+              <textarea placeholder="Message..." class="message-input" required></textarea>
+              <div class="chat-controls">
+                <button type="button"><i class="bi bi-emoji-smile"></i></button>
+                <div class="file-upload-wrapper">
+                  <input type="file" accept="image/*" id="file-input" hidden >
+                  <img src="#">
+                  <button type="button" id="file-upload"><i class="bi bi-paperclip"></i></button>
+                  <button type="button" id="cancel-upload"><i class="bi bi-x"></i></button>
+                </div>
+                <button type="submit" id="send-message"><i class="bi bi-arrow-up"></i></button>
+              </div>
+            </form>
+          </div>
+          <!--/Chat Footer-->
+        </div>
+        <!--/Chat Bot-->
+      </div>
+      <!--/Container Fluid-->
+      <button id="chatbot-toggler">
+        <span><i class="bi bi-chat fs-4"></i></span>
+        <span><i class="bi bi-x-lg fs-4"></i></span>
+      </button>
+      <button type="button" class="btn btn-dark" id="btn-back-to-top"> <i class="bi bi-chevron-up fs-5" onclick="backToTop();"></i></button>
     </div>
     <!-- /container fluid -->
     <!-- Optional JavaScript; choose one of the two! -->
