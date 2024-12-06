@@ -25,12 +25,14 @@ for(var cb of checkboxes) {
        }
    })
 }
+
 function QAcopy(){
   var copyText = document.getElementById("CN");
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(copyText.value);
 }
+
 /*function AP() {
 var checkBox = document.getElementById('AP');
 var n = document.getElementById('ADS');
@@ -542,11 +544,7 @@ function formatText(command) {
   }
 }
 
-//Get the button
-
 let mybutton = document.getElementById("btn-back-to-top");
-
-// When the user scrolls down 20px from the top of the document, show the button
 
 window.onscroll = function () {
   scrollFunction();
@@ -561,9 +559,8 @@ function scrollFunction() {
   } else {
     mybutton.style.display = "none";
   }
-}
 
-// When the user clicks on the button, scroll to the top of the document
+}
 
 function backToTop() {
   document.body.scrollTop = 0;
@@ -572,11 +569,9 @@ function backToTop() {
 
 const typedSpan = document.getElementById("typed");
 const totype = ["Support", "Email", "Templates"];
-
 const delayTyping_char = 150;
 const delayErasing_text = 150;
 const delayTyping_text = 2000;
-
 let totypeIndex = 0;
 let charIndex = 0;
 
@@ -591,7 +586,7 @@ function typeText() {
 	}
 }
 
-function eraseText() {
+/*function eraseText() {
 	if (charIndex > 0) {
 		typedSpan.textContent = totype[totypeIndex].substring(0, charIndex-1);
 		charIndex = charIndex-1;
@@ -603,7 +598,7 @@ function eraseText() {
 			totypeIndex = 0;
 			setTimeout(typeText, delayTyping_text);
 	}
-}
+}*/
 
 window.onload = function() {
 	if (totype[totypeIndex].length) setTimeout(typeText, delayTyping_text);
@@ -732,6 +727,7 @@ function displayTime24hours(timeZone){
     minute: 'numeric',
     second: 'numeric'
   };
+
   const formatter = new Intl.DateTimeFormat('en-US', time).format(now);
   const pstAmpm = formatter >= 24 ? 'AM' : 'PM';
   return `${formatter} ${pstAmpm}`;
@@ -785,4 +781,158 @@ function viewImage(){
 function closeImage(){
   modal.style.display = "none";
 }
+
+
+// Chat Bot -->
+const chatBody = document.querySelector(".chatbot-body");
+const messageInput = document.querySelector(".message-input");
+const sendMessage = document.querySelector("#send-message");
+
+const API_KEY = "AIzaSyBdyAOqXO2L_DRLHZ6c1BqBzamdb9AwFAc";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+const userData = {
+  message: null,
+  file: {
+    data: null,
+    mime_type: null
+  }
+}
+const initialHeight = messageInput.scrollHeight;
+
+const generateBotresponse = async (incomingBotmessagediv) => {
+  const messageElement = incomingBotmessagediv.querySelector(".message-text");
+  const requestOptions = {
+    method: "POST",
+    headers:{ "Content-Type": "application/json" },
+    body: JSON.stringify({
+      contents: [{
+        parts: [{ text: userData.message
+         }, ...(userData.file.data ? [{ inline_data: userData.file}] : [])]
+      }]
+    })
+  }
+try {
+  const response = await fetch(API_URL, requestOptions);
+  const data = await response.json();
+  if(!response.ok)throw new Error(data.error.message);
+
+  //BOT response -->
+  const apiResponsetext = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
+  messageElement.innerHTML = apiResponsetext;
+} catch (error) {
+  console.log(error);
+  messageElement.innerHTML = error.message;
+  messageElement.style.color = "#ff0000";
+} finally {
+  userData.file = {};
+  incomingBotmessagediv.classList.remove("think");
+  chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
+}
+}
+
+//Message creation-->
+const createMessageElement = (content, ...classes) => {
+  const div = document.createElement("div");
+  div.classList.add("message", ...classes);
+  div.innerHTML = content;
+  return div;
+}
+
+// AssiAIzaSyBdyAOqXO2L_DRLHZ6c1BqBzamdb9AwFAsc-4-12-24
+//Message handler-->
+const handleOutgoingMessage = (e) => {
+  e.preventDefault();
+  userData.message = messageInput.value.trim();
+  messageInput.value = "";
+  fileUploadview.classList.remove("file-uploaded");
+  messageInput.dispatchEvent(new Event("input"));
+  const messageContent = `<div class="message-text"></div>
+  ${userData.file.data ? `<img src="data:${userData.file.mime_type};base64,${userData.file.data}" class="attachment" />` : ""}`;
+  const outgoingMessagediv = createMessageElement(messageContent,"user-message");
+  outgoingMessagediv.querySelector(".message-text").textContent = userData.message;
+  chatBody.appendChild(outgoingMessagediv);
+  chatBody.scrollTo({ 
+    top: chatBody.scrollHeight, 
+    behavior: "smooth" 
+  });
+
+  //Bot response using setTimeout method
+  setTimeout(() => {
+    const messageContent = `
+    <i class="bi bi-robot fs-3 rob-avatar"></i>
+    <div class="message-text">
+     <div class="think-indicator">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+     </div>
+    </div>`; //<-- Declaration of const with a value of div/style using template literals
+    
+    const incomingBotmessagediv = createMessageElement(messageContent, "bot-message", "think");//<-- Declaration of
+    chatBody.appendChild(incomingBotmessagediv);
+    chatBody.scrollTo({ 
+      top: chatBody.scrollHeight, 
+      behavior: "smooth"
+     });
+    generateBotresponse(incomingBotmessagediv);
+  }, 600);
+}
+
+//Message passer
+messageInput.addEventListener("keydown",(e)=>{
+const userMessage = e.target.value.trim();
+if(e.key === "Enter" && userMessage && !e.shiftKey && window.innerWidth > 768){
+  handleOutgoingMessage(e);
+}
+}); // <-- Keypress send with shiftkey dynamic
+sendMessage.addEventListener("click", (e) => handleOutgoingMessage(e)); //<-- Click Send
+
+//Dynamic scroll height
+messageInput.addEventListener("input", () => {
+  messageInput.style.height = `${initialHeight}px`;// <-- Declare initial height
+  messageInput.style.height = `${messageInput.scrollHeight}px`; // <-- Declare scrolling effect
+  document.querySelector(".chat-form").style.borderRadius = messageInput.scrollHeight > initialHeight ? "15px" : "32px"; // <-- Condition Min and Max height using ternary opperator
+}); 
+
+//File upload
+const fileInput = document.querySelector("#file-input");
+const fileUploadview = document.querySelector(".file-upload-wrapper");
+const cancelButtonfile = document.querySelector("#cancel-upload");
+
+fileInput.addEventListener("change", () => {
+  const file = fileInput.files[0];
+  if(!file){
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    fileUploadview.querySelector("img").src = e.target.result;
+    fileUploadview.classList.add("file-uploaded");
+    const base64String = e.target.result.split(",")[1];
+
+    userData.file = {
+      data: base64String,
+      mime_type: file.type
+    }
+    fileInput.value = "";
+  }
+  reader.readAsDataURL(file);
+});
+
+cancelButtonfile.addEventListener("click", () => {
+  userData.file = {};
+  fileUploadview.classList.remove("file-uploaded");
+});
+
+document.querySelector("#file-upload").addEventListener("click", () => fileInput.click());
+
+
+//Chatbot toggler
+const chatBotshow = document.querySelector("#chatbot-toggler");
+chatBotshow.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+//Chatbot close
+const closeChat = document.querySelector("#close-chatbot");
+closeChat.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 
