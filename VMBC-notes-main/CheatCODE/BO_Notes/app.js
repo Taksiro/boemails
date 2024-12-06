@@ -817,7 +817,7 @@ try {
   if(!response.ok)throw new Error(data.error.message);
 
   //BOT response -->
-  const apiResponsetext = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
+  const apiResponsetext = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "**$1**").trim().replace(/\s{2,}/g, " ");
   messageElement.innerHTML = apiResponsetext;
 } catch (error) {
   console.log(error);
