@@ -42,9 +42,9 @@
 }
 
 #chatbot-toggler:hover span:first-child {
-  opacity: 1; /* Adjust opacity as desired */
-  color: #e4bc3b; /* Change color on hover */
-  transition: all 0.2s ease; /* Add smooth transition */
+  opacity: 1; 
+  color: #e4bc3b; 
+  transition: all 0.2s ease; 
 }
 
 #chatbot-toggler span{
@@ -60,6 +60,13 @@ body.show-chatbot .chatbot-popup{
 
 body.show-chatbot #chatbot-toggler{
   transform: rotate(90deg);
+}
+
+
+#chatbot-toggler:hover span:first-child {
+  opacity: 1;
+  color: #e4bc3b; 
+  transition: all 0.2s ease; 
 }
 
 body.show-chatbot #chatbot-toggler span:first-child,
