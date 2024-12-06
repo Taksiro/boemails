@@ -41,6 +41,12 @@
   transition: all 0.2s ease;
 }
 
+#chatbot-toggler:hover span:first-child {
+  opacity: 1; 
+  color: #e4bc3b; 
+  transition: all 0.2s ease; 
+}
+
 #chatbot-toggler span{
   color: #f1f1f1;
   position: absolute;
@@ -55,6 +61,7 @@ body.show-chatbot .chatbot-popup{
 body.show-chatbot #chatbot-toggler{
   transform: rotate(90deg);
 }
+
 
 #chatbot-toggler:hover span:first-child {
   opacity: 1;
@@ -329,6 +336,33 @@ background: transparent;
 .chat-form .file-upload-wrapper.file-uploaded img,
 .chat-form .file-upload-wrapper.file-uploaded:hover #cancel-upload{
   display: block;
+}
+
+@media (max-width: 520px) {
+  #chatbot-toggler {
+    right: 25px;
+    bottom: 60px;
+  }
+  .chatbot-popup{
+    right: 40px;
+    bottom: 120px;
+    height: 75%;
+    border-radius: 10;
+    width: 75%;
+  }
+  .chatbot-popup .chat-header{
+    padding: 12px 15px;
+  }
+  .chatbot-body{
+    height: calc(90% - 55px);
+    padding: 25px 15px;
+  }
+  .chat-footer{
+    padding: 10px 15px 15px;
+  }
+  .chat-form .file-upload-wrapper.file-uploaded #cancel-upload{
+    opacity: 0;
+  }
 }
 
 #templates .active{

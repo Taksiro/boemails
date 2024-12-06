@@ -604,7 +604,6 @@ window.onload = function() {
 	if (totype[totypeIndex].length) setTimeout(typeText, delayTyping_text);
 }
 
-
 //function phtime() {
 //  const now = new Date();
 //  let hours = now.getHours();
@@ -803,7 +802,8 @@ const generateBotresponse = async (incomingBotmessagediv) => {
   const messageElement = incomingBotmessagediv.querySelector(".message-text");
   const requestOptions = {
     method: "POST",
-    headers:{ "Content-Type": "application/json" },
+    headers:{ "Content-Type": "application/json" 
+    },
     body: JSON.stringify({
       contents: [{
         parts: [{ text: userData.message
