@@ -42,9 +42,9 @@
 }
 
 #chatbot-toggler:hover span:first-child {
-  opacity: 1; 
-  color: #e4bc3b; 
-  transition: all 0.2s ease; 
+  opacity: 1; /* Adjust opacity as desired */
+  color: #e4bc3b; /* Change color on hover */
+  transition: all 0.2s ease; /* Add smooth transition */
 }
 
 #chatbot-toggler span{
@@ -60,13 +60,6 @@ body.show-chatbot .chatbot-popup{
 
 body.show-chatbot #chatbot-toggler{
   transform: rotate(90deg);
-}
-
-
-#chatbot-toggler:hover span:first-child {
-  opacity: 1;
-  color: #e4bc3b; 
-  transition: all 0.2s ease; 
 }
 
 body.show-chatbot #chatbot-toggler span:first-child,
@@ -239,6 +232,7 @@ body.show-chatbot #chatbot-toggler span:last-child{
 
 .chat-footer .chat-form{
   display: flex;
+  position: relative;
   align-items: center;
   background: #fff;
   border-radius: 32px;
@@ -288,9 +282,9 @@ outline: 2px solid #3f3f3f;
 }
 
 .chat-form .chat-controls #send-message{
-color: #424242;
-display: none;
-background: transparent;
+  color: #424242;
+  display: none;
+  background: transparent;
 }
 
 .chat-form .message-input:valid~.chat-controls #send-message{
@@ -346,15 +340,15 @@ background: transparent;
   .chatbot-popup{
     right: 40px;
     bottom: 120px;
-    height: 75%;
+    height: 50%;
     border-radius: 10;
     width: 75%;
   }
   .chatbot-popup .chat-header{
-    padding: 12px 15px;
+    padding: 20px 15px;
   }
   .chatbot-body{
-    height: calc(90% - 90px);
+    height: calc(90% - 90px); 
     padding: 25px 15px;
   }
   .chat-footer{
@@ -365,9 +359,35 @@ background: transparent;
   }
 }
 
+em-emoji-picker{
+  position: absolute;
+  left: 50%;
+  top: -260px;  
+  width: 100%;
+  visibility: hidden;
+  max-width: 350px;
+  max-height: 250px;
+  transform: translateX(-50%);
+}
+
+body.show-emoji-picker em-emoji-picker{
+  visibility: visible;
+}
+
+#templates{
+  font-size: 1rem;
+  position: absolute;
+  left: 25%;
+  transform: translateX(-75%);
+  width: 15%;
+  scrollbar-width: thin;
+  
+}
+
+
 #templates .active{
-  background-color: #29241E;
-  color: whitesmoke;
+  background-color: #2b2b2b;
+  color: #ffffff;
 }
 
 .st{
