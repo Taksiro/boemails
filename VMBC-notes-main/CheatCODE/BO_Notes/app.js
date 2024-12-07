@@ -936,3 +936,20 @@ chatBotshow.addEventListener("click", () => document.body.classList.toggle("show
 const closeChat = document.querySelector("#close-chatbot");
 closeChat.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 
+// Emoji setup
+const picker = new EmojiMart.Picker({
+  theme: "light",
+  skinTonePosition: "none",
+  previewPosition: "none",
+  onEmojiSelect: (emoji) => {
+    const { selectionStart:start, selectionEnd: end } = messageInput;
+    messageInput.setRangeText(emoji.native, start, end, "end");
+    messageInput.focus();
+  },
+  onClickOutside:  (e) => {
+    e.target.id === "emoji-picker" ? document.body.classList.toggle("show-emoji-picker") : document.body.classList.remove("show-emoji-picker")
+  }
+});
+
+document.querySelector(".chat-form").appendChild(picker);
+
