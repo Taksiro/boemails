@@ -15,7 +15,7 @@
      <title>Safelink Q.A. Notes</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e9e9e9;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand ms-5" href="javascript:window.location.reload(true)">
           <h4>Safelink Q.A. TAGS</h4>
@@ -65,7 +65,7 @@
     <div class="container-fluid mt-3">
       <div class="row">
         <div class="col-4 d-none d-md-block">
-          <nav id="templates" class="h-100 flex-column align-items-stretch pe-4 ms-5 position-fixed">
+          <nav id="templates" class="h-100 ms-5 position-fixed">
             <nav class="nav nav-pills flex-column">
               <a class="nav-link" href="#TZ-15">Time Zones</a>
               <a class="nav-link" href="#FTR-1">First Time Response</a>
@@ -123,33 +123,33 @@
         <!--/ col-4 -->
         <div class="col">
           <div data-bs-spy="scroll" data-bs-target="#templates" data-bs-smooth-scroll="true" class="scrollspy-example-2 ms-2 st" tabindex="0">
-            <div id="TZ-15">
+            <div id="TZ-15" class="container-fluid s-date">
               <div class="row">
-                <div class="col shadow-sm p-3 mb-5 bg-dark text-white rounded">
+                <div class="col p-3 mb-5 text-dark border-start">
                   <span class="fs-4">Helpscout</span>
-                  <small class="align-baseline text-warning"><div class="vr me-2"></div>EST</small>
+                  <small class="align-baseline"><div class="vr me-2"></div>EST</small>
                   <hr class="m-0" /> 
-                  <div class="p-3 mt-4 bg-dark text-white rounded">
+                  <div class="p-3 mt-4">
                   <span class="fs-6"id="est-date"></span>
                   <br>
                   <span class="fs-1 fw-semibold" id="est-time"></span>
                   </div>
                 </div>
-                <div class="col shadow-sm p-3 mb-5 bg-dark text-white rounded ms-2">
+                <div class="col p-3 mb-5 text-dark ms-2  border-start">
                   <span class="fs-4" >Vault</span>
-                  <small class="align-baseline text-warning"><div class="vr me-2"></div>PST</small>
+                  <small class="align-baseline"><div class="vr me-2"></div>PST</small>
                   <hr class="m-0" /> 
-                  <div class="p-3 mt-4 bg-dark text-white rounded">
+                  <div class="p-3 mt-4">
                     <span class="fs-6"id="pst-date"></span>
                     <br>
                     <span class="fs-1 fw-semibold" id="pst-time"></span>
                   </div>
                 </div>
-                <div class="col shadow-sm p-3 mb-5 bg-dark text-white rounded ms-2">
+                <div class="col p-3 mb-5 text-dark ms-2  border-start">
                   <span class="fs-4">Philippines</span>
-                  <small class="align-baseline text-warning"><div class="vr me-2"></div>Asia/Manila</small>
+                  <small class="align-baseline"><div class="vr me-2"></div>Asia/Manila</small>
                   <hr class="m-0" /> 
-                  <div class="p-3 mt-4 bg-dark text-white rounded">
+                  <div class="p-3 mt-4">
                   <span class="fs-6"id="asia_date"></span>
                   <br>
                   <span class="fs-1 fw-semibold" id="ph_time"></span>
@@ -158,10 +158,9 @@
               </div>
             </div>
             <!--/TZ-15-->
-            <div id="FTR-1" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">First Time Response</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="FTR-1" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">First Time Response</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -176,20 +175,18 @@
               </div>
             </div>
             <!--/ FTR-1-->
-            <div id="FTR-1-1" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+            <div id="FTR-1-1" class="p-3 mb-5">
               <div class="row">
                 <div class="col">
-                  <span class="blockquote fs-5 fw-semibold  mt-2">Activation</span>
+                  <span class="blockquote fs-4 fw-semibold mt-2">Activation</span>
                 </div>
                 <div class="col input-group mb-3 mt-1">
-                  <span class="input-group-text" id="inputGroup-sizing-default">CC</span>
-                  <input type="text" id="CN" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" value="tf-fieldactissues@verizon.com" aria-describedby="button-addon2" readonly>
+                  <input type="text" id="CN" class="form-control border-top-0 border-start-0" placeholder="Recipient's username" aria-label="Recipient's username" value="tf-fieldactissues@verizon.com" aria-describedby="button-addon2" readonly>
                   <button class="btn btn-outline-dark" type="button" onclick="QAcopy();" id="button-addon2">Copy</button>
                 </div>
               </div>
                <!--/End of Row-->
-               <hr class="m-0" /> 
-               <div class="card-body">
+               <div class="border-start border-dark-subtle mt-2">
                 <div class="form-controla p-3 text" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -205,10 +202,9 @@
               </div>
             </div>
             <!--/FTR-1-1-->
-            <div id="FTR-1-2" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Concern and screenshot</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="FTR-1-2" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Concern and screenshot</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -223,10 +219,9 @@
               </div>
             </div>
             <!--/ FTR-1-2-->
-            <div id="FTR-1-3" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Screenshot</span>
-              <hr class="m-0" />
-              <div class="card-body">
+            <div id="FTR-1-3" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Screenshot</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -241,10 +236,9 @@
               </div>
             </div>
             <!--/ FTR-1-3-->
-            <div id="FR-2" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Follow-up</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="FR-2" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Follow-up</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -259,10 +253,9 @@
               </div>
             </div>
             <!--/ FR-2-->
-            <div id="ER-3" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Escalate</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="ER-3" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Escalate</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -275,10 +268,9 @@
               </div>
             </div>
             <!--/ ER-3-->
-            <div id="ER-3-1" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Escalated</span>
-              <hr class="m-0" />
-              <div class="card-body">
+            <div id="ER-3-1" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Escalated</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -291,10 +283,9 @@
               </div>
             </div>
             <!--/ ER-3-1-->
-            <div id="ER-3-2" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Escalated no Response</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="ER-3-2" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Escalated no Response</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -307,10 +298,9 @@
               </div>
             </div>
             <!--/ ER-3-2-->
-            <div id="PQ-4-1" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">24 Hours Error (Message)</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="PQ-4-1" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">24 Hours Error (Message)</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -323,10 +313,9 @@
               </div>
             </div>
             <!--/ PQ-4-1-->
-            <div id="PQ-4-2" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Invalid Format Error (Address Information Page)</span>
-              <hr class="m-0" />
-              <div class="card-body">
+            <div id="PQ-4-2" class="p-3 mb-5">
+              <span class="bblockquote fs-4 fw-semibold mt-2">Invalid Format Error (Address Information Page)</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -360,10 +349,9 @@
               </div>
             </div>
             <!--/ PQ-4-2-->
-            <div id="PQ-4-3" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Unknown Issue (Object object, Unknown, E-Timeout, Oops, IDBDatabase)</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="PQ-4-3" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Unknown Issue (Object object, Unknown, E-Timeout, Oops, IDBDatabase)</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -399,10 +387,9 @@
               </div>
             </div>
             <!--/ PQ-4-3-->           
-            <div id="PQ-4-4" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">An error has occurred (E-sign page)</span>
-              <hr class="m-0" />
-              <div class="card-body">
+            <div id="PQ-4-4" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">An error has occurred (E-sign page)</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -415,10 +402,9 @@
               </div>
             </div>
             <!--/ PQ-4-4-->
-            <div id="PQ-4-5" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Captcha Validation Error</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="PQ-4-5" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Captcha Validation Error</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -431,10 +417,9 @@
               </div>
             </div>
             <!--/ PQ-4-5-->
-            <div id="PQ-4-6" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Code: E-TIMEOUT (With known issue)</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="PQ-4-6" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Code: E-TIMEOUT (With known issue)</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -449,10 +434,9 @@
               </div>
             </div>
             <!--/ PQ-4-6-->
-            <div id="BI-5" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Badge Approved</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="BI-5" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Badge Approved</span>
+              <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -467,10 +451,9 @@
               </div>
             </div>
             <!--/ BI-5-->
-            <div id="BI-5-1" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Badge Uploaded</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="BI-5-1" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Badge Uploaded</span>
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -487,10 +470,9 @@
               </div>
             </div>
             <!--/ BI-5-1-->
-            <div id="BI-5-2" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Badge required</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="BI-5-2" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Badge required</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -507,10 +489,9 @@
               </div>
             </div>
             <!--/ BI-5-2-->
-            <div id="BI-5-3" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Badge rejected</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="BI-5-3" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Badge rejected</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -525,8 +506,8 @@
               </div>
             </div>
             <!--/ BI-5-3-->
-            <div id="CI-6" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">CALAD: Issue (With known issue)</span>
+            <div id="CI-6" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">CALAD: Issue (With known issue)</span>
               <figcaption class="footer">
                 <small>- Remember: 
                   <cite title="Source Title">
@@ -534,7 +515,6 @@
                   </cite>
                 </small>
               </figcaption>
-              <hr class="m-0" />
               <div class="card-body">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
@@ -552,10 +532,9 @@
               </div>
             </div>
             <!--/ CI-6-->
-            <div id="CI-6-1" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">CALAD: ER requesting timeframe</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="CI-6-1" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">CALAD: ER requesting timeframe</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -572,10 +551,9 @@
               </div>
             </div>
             <!--/ CI-6-1-->
-            <div id="CI-6-2" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">CALAD: With Enrollment id</span>
-              <hr class="m-0" />
-              <div class="card-body">
+            <div id="CI-6-2" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">CALAD: With Enrollment id</span>
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -592,10 +570,9 @@
               </div>
             </div>
             <!--/ CI-6-2-->
-            <div id="TI-0" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Token is Invalid</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="TI-0" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Token is Invalid</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -637,10 +614,9 @@
               </div>
             </div>
             <!--/TI-0-->
-            <div id="LZC-7" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Locked Zip Code (CA)</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="LZC-7" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Locked Zip Code (CA)</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -674,10 +650,9 @@
               </div>
             </div>
             <!--/ LZ-7-->
-            <div id="IO-8" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Invited Onboarding (Invitation Error ONB0005)</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="IO-8" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Invited Onboarding (Invitation Error ONB0005)</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -692,10 +667,9 @@
               </div>
             </div>
             <!--/ IO-8-->
-            <div id="RP-9" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Retraining Program (Field Agent/ Team Manager)</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="RP-9" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Retraining Program (Field Agent/ Team Manager)</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -734,10 +708,9 @@
               </div>
             </div>
             <!--/ RP-9-->
-            <div id="GEO-10" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Geolocation</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="GEO-10" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Geolocation</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -771,10 +744,9 @@
               </div>
             </div>
             <!--/ GEO-10-->
-            <div id="PE-11" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Profile Edition</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="PE-11" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Profile Edition</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -801,10 +773,9 @@
               </div>
             </div>
             <!--/ PE-11-->
-            <div id="SB-12" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Select a Brand</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="SB-12" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Select a Brand</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -819,10 +790,9 @@
               </div>
             </div>
             <!--/ SB-12-->
-            <div id="VL-13" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Valid location to continue (Error)</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="VL-13" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Valid location to continue (Error)</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -852,10 +822,9 @@
               </div>
             </div>
             <!--/ VL-13-->
-            <div id="File-14" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">File directory not found (Downloading Issue)</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="File-14" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">File directory not found (Downloading Issue)</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -889,10 +858,9 @@
               </div>
             </div>
             <!--/ File-14-->
-            <div id="RQ-15" class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-              <span class="blockquote fs-5 fw-semibold mt-2 ms-1">Reinstall Quest Application</span>
-              <hr class="m-0" /> 
-              <div class="card-body">
+            <div id="RQ-15" class="p-3 mb-5">
+              <span class="blockquote fs-4 fw-semibold mt-2">Reinstall Quest Application</span> 
+              <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
                   <br>
@@ -956,7 +924,7 @@
             <div class="message bot-message">
               <i class="bi bi-robot fs-3 rob-avatar"></i>
               <div class="message-text">
-                Hey there <br /> How can I help you today?
+                Hello! 😉 <br /> How can I help you?
               </div>
             </div>
           </div>
@@ -965,7 +933,7 @@
             <form action="#" class="chat-form">
               <textarea placeholder="Message..." class="message-input" required></textarea>
               <div class="chat-controls">
-                <button type="button"><i class="bi bi-emoji-smile"></i></button>
+                <button type="button"><i class="bi bi-emoji-smile" id="emoji-picker"></i></button>
                 <div class="file-upload-wrapper">
                   <input type="file" accept="image/*" id="file-input" hidden >
                   <img src="#">
@@ -991,7 +959,9 @@
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>-->
-    <!-- Option 2: Separate Popper and Bootstrap JS -->  
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+         <!-- Emoji picker link-->
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
