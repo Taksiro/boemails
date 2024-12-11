@@ -12,7 +12,8 @@
   position: fixed;
   right: 35px;
   bottom: 120px;
-  width: 420px;
+  width: 400px;
+  height: calc(80% - 100px);
   background: #f1f1f1;
   overflow: hidden;
   opacity: 0;
@@ -20,7 +21,7 @@
   transform-origin: bottom right;
   pointer-events: none;
   border-radius: 15px;
-  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+  box-shadow: 0 0 128px 0 rgba(12, 4, 4, 0.1),
   0 32px 64px -48px rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease;
 }
@@ -117,7 +118,7 @@ body.show-chatbot #chatbot-toggler span:last-child{
   display: flex;
   gap: 20px;
   flex-direction: column;
-  height: 460px;
+  height: calc(90% - 15%);
   margin-bottom: 82px;
   overflow-y: auto;
   flex-direction: column;
@@ -337,10 +338,13 @@ outline: 2px solid #3f3f3f;
     right: 25px;
     bottom: 60px;
   }
+  .chat-header{
+    padding: 15px 15px;
+  }
   .chatbot-popup{
     right: 40px;
     bottom: 120px;
-    height: 50%;
+    height: calc(100% - 230px);
     border-radius: 10;
     width: 75%;
   }
@@ -348,7 +352,7 @@ outline: 2px solid #3f3f3f;
     padding: 20px 15px;
   }
   .chatbot-body{
-    height: calc(90% - 90px); 
+    height: calc(90% - 100px); 
     padding: 25px 15px;
   }
   .chat-footer{
@@ -375,15 +379,18 @@ body.show-emoji-picker em-emoji-picker{
 }
 
 #templates{
-  font-size: 1rem;
+  font-size: 0.9rem;
   position: absolute;
   left: 25%;
   transform: translateX(-75%);
   width: 15%;
   scrollbar-width: thin;
-  
+  scrollbar-color: transparent transparent;
 }
 
+#templates:hover{
+  scrollbar-color: #afafaf transparent;
+}
 
 #templates .active{
   background-color: #2b2b2b;
@@ -397,6 +404,8 @@ body.show-emoji-picker em-emoji-picker{
 .form-controla{
   outline-color: #EFEFF6;
   cursor: text;
+  border-radius: 10px;
+  font-size: 0.9em;
 }
 
 html {
