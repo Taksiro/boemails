@@ -569,9 +569,9 @@ function backToTop() {
 
 const typedSpan = document.getElementById("typed");
 const totype = ["Support", "Email", "Templates"];
-const delayTyping_char = 150;
-const delayErasing_text = 150;
-const delayTyping_text = 2000;
+const delayTyping_char = 70;
+const delayErasing_text = 70;
+const delayTyping_text = 7000;
 let totypeIndex = 0;
 let charIndex = 0;
 
@@ -586,7 +586,7 @@ function typeText() {
 	}
 }
 
-/*function eraseText() {
+function eraseText() {
 	if (charIndex > 0) {
 		typedSpan.textContent = totype[totypeIndex].substring(0, charIndex-1);
 		charIndex = charIndex-1;
@@ -598,7 +598,7 @@ function typeText() {
 			totypeIndex = 0;
 			setTimeout(typeText, delayTyping_text);
 	}
-}*/
+}
 
 window.onload = function() {
 	if (totype[totypeIndex].length) setTimeout(typeText, delayTyping_text);
