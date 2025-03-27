@@ -746,7 +746,7 @@ function displayDate(dtimeZone){
 }
 
 const phTimeZone = 'Asia/Manila';
-const estTimeZone = 'EST';
+const estTimeZone = 'America/Toronto';
 const pstTimeZone = 'PST';
 const phTime = document.getElementById('ph_time');
 const asiaDate = document.getElementById('asia_date');
