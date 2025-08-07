@@ -408,6 +408,10 @@ body.show-emoji-picker em-emoji-picker{
   font-size: 0.9em;
 }
 
+.form-controla:focus{
+  outline: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
