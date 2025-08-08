@@ -70,13 +70,14 @@
               <a class="nav-link" href="#FTR-1">First Time Response</a>
               <a class="nav-link" href="#WR-2">Waiting Responses</a>
               <a class="nav-link" href="#ER-17">Educating Responses</a>
-              <a class="nav-link" href="#BGC-18">Failed BGC</a>
               <a class="nav-link" href="#FTR-1-1">Activation</a>
-              <a class="nav-link" href="#ER-3">Escalation Response Ideas</a>
+              <a class="nav-link" href="#ER-3">Escalate Responses</a>
               <a class="nav-link" href="#PQ-4">Quest Errors</a>
               <nav class="nav nav-pills flex-column">
                 <a class="nav-link ms-3 my-1" href="#PQ-4-1">24 Hours Error</a>
                 <a class="nav-link ms-3 my-1" href="#PQ-4-2">Invalid Format Error</a>
+                <a class="nav-link ms-3 my-1" href="#PQ-4-7">Mailing Address Error</a>
+                <a class="nav-link ms-3 my-1" href="#PQ-4-8">Public Record Error</a>
                 <a class="nav-link ms-3 my-1" href="#PQ-4-3">Probing Unkown issue</a>
                 <a class="nav-link ms-3 my-1" href="#PQ-4-4">An error has occured</a>
                 <a class="nav-link ms-3 my-1" href="#PQ-4-5">Captcha Validation Error</a>
@@ -91,7 +92,13 @@
                 <a class="nav-link ms-3 my-1" href="#BI-5-3">Badge Rejected</a>
                 <a class="nav-link ms-3 my-1" href="#BI-5-4">Send Badge Response</a>
               </nav>
-              <!--/ nav BI-->
+              <a class="nav-link" href="#OS-1">Onboarding Status</a>
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link ms-3 my-1" href="#OS-1-1">Failed BGC</a>
+                <a class="nav-link ms-3 my-1" href="#OS-1-2">Pending Contract Signature</a>
+                <a class="nav-link ms-3 my-1" href="#OS-1-3">Invitation OB0005</a>
+              </nav>
+              <!--/ nav OS-->
               <a class="nav-link" href="#CI-6">CALAD Issue response</a>
               <nav class="nav nav-pills flex-column">
                 <a class="nav-link ms-3 my-1" href="#CI-6-1">ER requesting timeframe</a>
@@ -108,10 +115,8 @@
               <!--/ Escalation -->
               <a class="nav-link" href="#TI-0">Token Invalid</a>
               <a class="nav-link" href="#LZC-7">Locked Zip Code<a>
-              <a class="nav-link" href="#IO-8">Invited Onboarding</a>
               <a class="nav-link" href="#RP-9">Retraining Program</a>
               <a class="nav-link" href="#GEO-10">Geolocation/Camera Permission</a>
-              <a class="nav-link" href="#PCS">Pending Contract Signature</a>
               <a class="nav-link" href="#PE-11">Profile Edition</a>
               <a class="nav-link" href="#ENR">Enrolled</a>
               <a class="nav-link" href="#VL-13">Valid Location</a>
@@ -129,7 +134,7 @@
             <div id="TZ-15" class="container-fluid">
               <div class="row">
                 <div class="col p-3 mb-5 text-dark border-start">
-                  <span class="fs-4">Helpscout</span>
+                  <span class="fs-4 ">Helpscout</span>
                   <small class="align-baseline"><div class="vr me-2"></div>EST</small>
                   <hr class="m-0" /> 
                   <div class="p-3 mt-4">
@@ -179,17 +184,18 @@
             </div>
             <!--/ FTR-1-->
             <div id="WR-2" class="p-3 mb-5">
-              <span class="fs-5 fw-semibold mt-2">Waiting Response</span>
+              <span class="fs-5 fw-semibold mt-2"><i class="bi bi-hourglass-split text-primary"></i> Waiting Responses</span>
               <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p class="alert alert-primary p-3 rounded-2 shadow-sm">Please give us more time to review your concern. We'll get back to you.</p>
+                  <p class="alert alert-primary p-3 rounded-2 shadow-sm">Please give us more time to review your concern. We'll get back to you once we have an update.</p>
                   <p class="alert alert-primary p-3 rounded-2 shadow-sm">We have yet to finish reviewing your concern. Please give us more time.</p>
                 </div>
               </div>
             </div>
             <!--/ WR-2-->
             <div id="ER-17" class="p-3 mb-5">
-              <span class="fs-5 fw-semibold mt-2">Educating Responses</span>
+              <span class="fs-5 fw-semibold mt-2"><i class="bi bi-info-circle text-info"></i> Educating Responses</span>
               <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p class="alert alert-info p-3 rounded-2 shadow-sm">In addition, regarding password resets, this is being handled personally since Support Agents do not have access to your credentials.</p>
@@ -206,23 +212,7 @@
               </div>
             </div>
             <!--/ ER-17 -->
-             <div id="BGC-18" class="p-3 mb-5">
-              <span class="fs-5 fw-semibold mt-2">Failed BGC Authorization and Disclosure</span>
-              <div class="border-start border-dark-subtle mt-4">
-                <div class="form-controla p-3" contenteditable="true">
-                  <p>Hi there,</p>
-                  <br>
-                  <br>
-                  <p>Upon checking, the account status is Failed BGC Authorization and Disclosure. Please refer to your Agency regarding this matter.</p>
-                  <br>
-                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
-                  <br>
-                  <br>
-                  <p>Best regards,</p>
-                </div>
-              </div>
-            </div>
-            <!-- / BGC -->
+
             <div id="FTR-1-1" class="p-3 mb-5">
               <div class="row">
                 <div class="col">
@@ -254,7 +244,7 @@
               </div>
             </div>
             <div id="ER-3" class="p-3 mb-5">
-              <span class="fs-5 fw-semibold mt-2">Escalate Respnoses</span>
+              <span class="fs-5 fw-semibold mt-2"><i class="bi bi-reply-all text-primary"></i> Escalate Responses</span>
               <div class="border-start border-dark-subtle mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p class="alert alert-primary">We will escalate your concern to the proper department. As soon as we receive feedback from them, we'll let you know.</p>
@@ -263,8 +253,8 @@
                 </div>
               </div>
             </div>
-            <div id="PQ-4" class="border-start border-danger-subtle p-3 mb-5">
-              <span class="fs-4 fw-semibold mt-2">Quest Errors</span>
+            <div id="PQ-4" class="border-start border-3 border-danger-subtle p-3 mb-5">
+              <span class="fs-4 fw-semibold mt-2"><i class="bi bi-exclamation-circle alert text-danger"></i> Quest Errors</span>
             <!--/ PQ-4-->
             <div id="PQ-4-1" class="p-3 mb-5">
               <span class="fs-5 fw-semibold mt-2">24 Hours Error (Message)</span>
@@ -303,11 +293,21 @@
                   <p>Hi there,</p>
                   <br>
                   <br>
+                  <strong>Probing if applicable</strong>
+                  <p><i class="bi bi-question alert text-info"></i> Please provide a screenshot of the issue so we can check further.</p>
+                  <strong>Possible Approach</strong>
+                  <p>Please try creating the Applications without including anything in the middle name field. Let us know if it works</p>
+                  <p>Please try entering the name without the apostrophe. Let us know if it works.</p>
+                  <strong>If the issue persists</strong><span> -> proceed to escalation</span>
+                  <br>
+                  <p class="alert alert-warning">Escalation has taken place - Invalid Format</p>
+                  <br>
+                  <strong>Escalated Scenario Before -></strong>
                   <p>Can you try to create a new application without including anything in the middle name field in the applicant's information?</p>
                   <br>
                   <p><strong>If the issue still persists</strong> - Please provide a screenshot showing the full name in the Applicant’s information step in the Quest App. Thank you!</p>
                   <br>
-                  <p><strong>Scenario -</strong> As per the dedicated team, kindly try to enter the name without an apostrophe. </p>
+                  <p><strong>Resolution -</strong> As per the dedicated team, kindly try to enter the name without an apostrophe. </p>
                   <br>
                   <p>Let us know if this will go through.</p>
                   <br>
@@ -332,6 +332,40 @@
               </div>
             </div>
             <!--/ PQ-4-2-->
+            <div id="PQ-4-7" class="p-3 mb-5">
+              <span class="fs-5 fw-semibold mt-2">Mailing Address Error</span>
+              <div class="border-start border-dark-subtle mt-4">
+                <div class="form-controla p-3" contenteditable="true">
+                 <strong>Probing if applicable</strong>
+                  <p><i class="bi bi-question alert text-info"></i> Please provide a screenshot of the issue so we can check further.</p>
+                  <br>
+                  <p>++ After reviewing the address provided, you may try creating the application using the valid home address and selecting ‘NO’ for the option to use this as the mailing address. Next, enter the customer’s full mailing address, as this has been partially verified based on our checks. Please ask the customer for the complete shipping address and try creating the application again by following the steps provided. Thank you. <a href="https://secure.helpscout.net/conversation/2822042050/172028" contenteditable="false" target="_blank"><i>ex. 172028</i></a></p>
+                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
+                  <br>
+                  <p>++ We were able to find that the address __________ is not registered in USPS, meaning that the customer needs to provide a different mailing address like a PO Box or a valid address in which they can receive mail. (<a href="https://secure.helpscout.net/conversation/2917994890/176204" contenteditable="false" target="_blank"><i>ex. 176204</i></a> ER did not confirm whether the issue has been resolved.)</p>
+                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
+                </div>
+              </div>
+            </div>
+            <!-- /PQ-4-7  -->
+            <div id="PQ-4-8" class="p-3 mb-5">
+              <span class="fs-5 fw-semibold mt-2">Public Records (Deceased) Error</span>
+              <div class="border-start border-dark-subtle mt-4">
+                <div class="form-controla p-3" contenteditable="true">
+                 <strong>CA</strong>
+                  <p>Please reach out directly to CALAD for further information.</p>
+                  <br>
+                  <strong>TX</strong>
+                  <p>Please reach out directly to TXLAD for further information.</p>
+                  <br>
+                  <strong>Other State</strong>
+                  <p>Please reach out directly to NLAD for further information.</p>
+                  <br>
+                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
+                </div>
+              </div>
+            </div>
+            <!-- /PQ-4-8  -->
             <div id="PQ-4-3" class="p-3 mb-5">
               <span class="fs-5 fw-semibold mt-2">Unknown Issue (Object object, Unknown, E-Timeout, Oops, IDBDatabase)</span>
               <div class="border-start border-dark-subtle mt-4">
@@ -370,7 +404,7 @@
                   <p>Hi there,</p>
                   <br>
                   <br>
-                  <p>Just to confirm, have you tried using other devices? Also, is this issue happening with all applications?</p>
+                  <p>Please try to run the Quest App on other compatible devices. Let us know if it works.</p>
                   <br>
                   <p>++ Kindly try to uninstall and reinstall the Quest Application.</p>
                   <br>
@@ -430,8 +464,8 @@
             </div>
             </div>
             <!--/ PQ-4-6-->
-             <div id="BI-5" class="border-start border-info-subtle p-3 mb-5">
-              <span class="fs-4 fw-semibold mt-2">Badge</span>
+             <div id="BI-5" class="border-start border-3 border-success-subtle p-3 mb-5">
+              <span class="fs-4 fw-semibold mt-2"><i class="bi bi-person-badge alert text-success"></i> Badge Responses</span>
             <div id="BI-5-5" class="p-3 mb-5">
               <span class="fs-5 fw-semibold mt-2">Badge Approved</span>
               <div class="border-start border-dark-subtle mt-4">
@@ -450,7 +484,7 @@
             </div>
             <!--/ BI-5-->
             <div id="BI-5-1" class="p-3 mb-5">
-              <span class="fs5 fw-semibold mt-2">Badge Uploaded</span>
+              <span class="fs-5 fw-semibold mt-2">Badge Uploaded</span>
               <div class="border-start border-dark-suble mt-4">
                 <div class="form-controla p-3" contenteditable="true">
                   <p>Hi there,</p>
@@ -522,6 +556,60 @@
             </div>
             </div>
             <!--/ BI-5-4-->
+            <div id="OS-1" class="border-start border-3 border-warning-subtle p-3 mb-5">
+              <span class="fs-4 fw-semibold mt-2"><i class="bi bi-person-lines-fill alert text-warning"></i>Onboarding Status</span>
+              <div id="OS-1-1" class="p-3 mb-5">
+              <span class="fs-5 fw-semibold mt-2">Failed BGC Authorization and Disclosure</span>
+              <div class="border-start border-dark-subtle mt-4">
+                <div class="form-controla p-3" contenteditable="true">
+                  <p>Hi there,</p>
+                  <br>
+                  <br>
+                  <p>Upon checking, the account status is Failed BGC Authorization and Disclosure. Please refer to your Agency regarding this matter.</p>
+                  <br>
+                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
+                  <br>
+                  <br>
+                  <p>Best regards,</p>
+                </div>
+              </div>
+            </div>
+            <!-- / OS-1-1 -->
+             <div id="OS-1-2" class="p-3 mb-5">
+              <span class="fs-5 fw-semibold mt-2">Pending Contact Signature</span>
+              <div class="border-start border-dark-subtle mt-4">
+                <div class="form-controla p-3" contenteditable="true">
+                  <p>Hi there,</p>
+                  <br>
+                  <br>
+                  <p>Upon checking, the account status is Pending Contract Signature. Please refer to your Team Manager/Agency regarding this matter.</p>
+                  <br>
+                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
+                  <br>
+                  <br>
+                  <p>Best regards,</p>
+                </div>
+              </div>
+            </div>
+            <!--/ OS-1-2 -->
+            <div id="OS-1-3" class="p-3 mb-5">
+              <span class="fs-5 fw-semibold mt-2">Invited Onboarding (Invitation Error ONB0005)</span> 
+              <div class="border-start border-dark-suble mt-4">
+                <div class="form-controla p-3" contenteditable="true">
+                  <p>Hi there,</p>
+                  <br>
+                  <br>
+                  <p>Please reach out to your Team Manager/Agency regarding this matter so they can <em>resend/decline</em> the invite and send you a new one.</p>
+                  <br>
+                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
+                  <br>
+                  <br>
+                  <p>Best regards,</p>
+                </div>
+              </div>
+            </div>
+            <!--/ OS-1-3-->
+            </div>
             <div id="CI-6" class="p-3 mb-5">
               <span class="fs-5 fw-semibold mt-2">CALAD: Issue (With known issue)</span>
               <figcaption class="footer">
@@ -586,9 +674,8 @@
               </div>
             </div>
             <!--/ CI-6-2-->
-            <div id="es-1" class="border-start border-primary-subtle p-3 mb-5">
-              <span class="fs-4 fw-semibold mt-2">Escalated - (External)</span>
-            
+            <div id="es-1" class="border-start border-3 border-primary-subtle p-3 mb-5">
+              <span class="fs-4 fw-semibold mt-2"><i class="bi bi-reply-all alert text-primary"></i> Escalated - (External)</span>
             <!--es-1-->
             <div id="es-1-1" class="p-3 mb-5">
               <span class="fs-5 fw-semibold mt-2">Closing Response (Vault Profile Administrator Inactive)</span> 
@@ -803,23 +890,6 @@
               </div>
             </div>
             <!--/ LZ-7-->
-            <div id="IO-8" class="p-3 mb-5">
-              <span class="fs-5 fw-semibold mt-2">Invited Onboarding (Invitation Error ONB0005)</span> 
-              <div class="border-start border-dark-suble mt-4">
-                <div class="form-controla p-3" contenteditable="true">
-                  <p>Hi there,</p>
-                  <br>
-                  <br>
-                  <p>Please reach out to your Team Manager or Agency regarding this matter so they can <em>resend/decline</em> the invite and send you a new one.</p>
-                  <br>
-                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
-                  <br>
-                  <br>
-                  <p>Best regards,</p>
-                </div>
-              </div>
-            </div>
-            <!--/ IO-8-->
             <div id="RP-9" class="p-3 mb-5">
               <span class="fs-5 fw-semibold mt-2">Retraining Program (Field Agent)</span> 
               <div class="border-start border-dark-suble mt-4">
@@ -827,7 +897,7 @@
                   <p>Hi there,</p>
                   <br>
                   <br>
-                  <p>This has something to do with the retraining program. Kindly coordinate with your Agency for further information. ex. #<a href="https://secure.helpscout.net/conversation/2974579379/178761">178761</a></p>
+                  <p>This has something to do with the retraining program. Kindly coordinate with your Agency for further information. ex. #<a href="https://secure.helpscout.net/conversation/2974579379/178761" contenteditable="false" target="_blank">178761</a></p>
                   <br>
                   <p><strong>Team Manager/Agency Manager</strong> - Refer it to Elearning (elearning@emerios.com) ex. #<a href="https://secure.helpscout.net/conversation/2973147094/178715" contenteditable="false" target="_blank">178715</a></p>
                   <br>
@@ -869,10 +939,9 @@
                   <br>
                   <br>
                   <p>Please uninstall and reinstall the new Quest app once done, make sure to allow all permissions.</p>
+                  <p><strong>Old Quest</strong> - In addition for reference, here is the link to download the Quest application: <a href="https://tracfone.quest.emerios.com/">https://tracfone.quest.emerios.com</a></p>
                   <br>
-                  <p><strong>Old Quest</strong> - For reference, here is the link to download the Quest application: <a href="https://tracfone.quest.emerios.com/">https://tracfone.quest.emerios.com</a></p>
-                  <br>
-                  <p>Let me know if it works.</p>
+                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
                   <br>
                   <br>
                   <p>Best regards,</p>
@@ -895,24 +964,6 @@
               </div>
             </div>
             <!--/ GEO-10-->
-            <!-- PCS -->
-             <div id="PCS" class="p-3 mb-5">
-              <span class="fs-5 fw-semibold mt-2">Pending Contact Signature</span>
-              <div class="border-start border-dark-subtle mt-4">
-                <div class="form-controla p-3" contenteditable="true">
-                  <p>Hi there,</p>
-                  <br>
-                  <br>
-                  <p>Upon checking, the account status is Pending Contract Signature. Please refer to your Team Manager/Agency regarding this matter.</p>
-                  <br>
-                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
-                  <br>
-                  <br>
-                  <p>Best regards,</p>
-                </div>
-              </div>
-            </div>
-            <!--/ PCS -->
             <div id="PE-11" class="p-3 mb-5">
               <span class="fs-5 fw-semibold mt-2">Profile Edition</span> 
               <div class="border-start border-dark-suble mt-4">
@@ -969,7 +1020,7 @@
                   <p>Hi there,</p>
                   <br>
                   <br>
-                  <p>Based on the screenshot provided, you will not be able to log in as you are outside the orders creation area, or you are not connected to your designated IPs. If the error persists please reach out to your Team Manager/Agency.</p>
+                  <p>Based on the screenshot provided, you will not be able to log in as you are outside the orders creation area, or you are not connected to your designated IPs. If the error persists please reach out to your Team Manager/Agency for further assistance.</p>
                   <br>
                   <p>Please do not hesitate to reach out if you have any other concerns.</p>
                   <br>
@@ -1001,11 +1052,11 @@
                   <p>Hi there,</p>
                   <br>
                   <br>
-                  <p>Please make sure you are logging in to the new Quest application. For reference, here is the link to download the New Quest application:</p>
-                  <br>
+                  <p>Here is the link to download the New Quest application.</p>
+                  <p>For reference:</p>
                   <p><a href="https://tracfone.quest.emerios.com/"> https://tracfone.quest.emerios.com</a></p>
                   <br>
-                  <p>Please let me know if it works. Thank you!</p>
+                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
                   <br>
                   <br>
                   <p>Best regards,</p>
@@ -1040,7 +1091,7 @@
                   <p>For reference, here is the link to download the Quest application:</p>
                   <p><a href="https://tracfone.quest.emerios.com/"> https://tracfone.quest.emerios.com</a></p>
                   <br>
-                  <p>Please let me know if it works. Thank you!</p>
+                  <p>Please do not hesitate to reach out if you have any other concerns.</p>
                   <br>
                   <br>
                   <p>Best regards,</p>
